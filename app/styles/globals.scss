@@ -1,0 +1,80 @@
+@import '../../../node_modules/bootstrap/scss/bootstrap.scss';
+
+$blue:    #2F80ED;
+$red:     #EB5757;
+$orange:  #F2994A;
+$yellow:  #F2C94C;
+$green:   #219653;
+$gray-600: #828282;
+
+$info: $orange;
+
+.canvas-left, .canvas-left > div, .canvas-right, .canvas-right > div {
+    border: 1px solid $black;
+    background: $white;
+}
+
+.canvas-left {
+    display: grid;
+    grid: repeat(2, 200px)/repeat(2, 1fr);
+
+    > div {
+        display: grid;
+        position: relative;
+        gap: 10px;
+        grid-template-rows: 30px;
+        grid-auto-rows: 65px;
+        padding: 8px;
+
+        &:nth-child(1) {
+            grid-area: span 2/span 1;
+        }
+        &:nth-child(2) {
+            grid-column: span 1;
+        }
+        &:nth-child(3) {
+            grid-column: 2;
+            grid-row: span 2;
+        }
+    }
+
+}
+
+.canvas-right {
+    display: grid;
+    grid: repeat(2, 200px)/repeat(2, 1fr);
+    > div {
+        display: grid;
+        position: relative;
+        gap: 10px;
+        grid-template-rows: 30px;
+        grid-auto-rows: 65px;
+        padding: 8px;
+
+        &:nth-child(1) {
+            grid-column: span 1;
+        }
+
+        &:nth-child(2) {
+            grid-area: span 2/span 1;
+        }
+        &:nth-child(3) {
+            grid-column: 1;
+            grid-row: span 2; 
+        }
+
+    }
+}
+.fa-icon{
+    svg{
+        width: 40px;
+        height: 40px;
+    }
+}
+
+.btn-add{
+    svg{
+        width: 60px;
+        height: 60px;
+    }
+}
